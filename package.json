@@ -1,0 +1,55 @@
+{
+  "name": "aws-mailduck",
+  "version": "0.0.0",
+  "description": "CLI helper to build and deploy email templates to AWS SES",
+  "main": "lib/index.js",
+  "bin": {
+    "mailduck": "./bin/cli.js"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --fix",
+    "cli:test": "node bin/cli.js playground/*.html -o dist"
+  },
+  "lint-staged": {
+    "*.js": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedbernardo/aws-mailduck.git"
+  },
+  "keywords": [
+    "aws",
+    "ses",
+    "email",
+    "template"
+  ],
+  "author": "Pedro Bernardo <pedrovbernardo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedbernardo/aws-mailduck/issues"
+  },
+  "homepage": "https://github.com/pedbernardo/aws-mailduck#readme",
+  "dependencies": {
+    "commander": "^9.4.0",
+    "glob": "^8.0.3",
+    "juice": "^8.0.0",
+    "posthtml": "^0.16.6",
+    "posthtml-insert-at": "^0.2.7",
+    "sass": "^1.54.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "eslint": "8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-n": "15.0.0",
+    "eslint-plugin-promise": "6.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "vitest": "^0.21.0"
+  }
+}
