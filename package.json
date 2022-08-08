@@ -8,10 +8,14 @@
   },
   "scripts": {
     "prepare": "husky install",
+    "dev:css": "sass styles/main.scss dist/mailduck.css --style=compressed --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint . --fix",
-    "cli:test": "node bin/cli.js playground/*.html -o dist"
+    "cli:test": "node bin/cli.js playground/*.html -o output",
+    "clean": "rimraf dist output",
+    "prebuild": "npm run clean",
+    "build": "sass styles/main.scss dist/mailduck.css --style=compressed"
   },
   "lint-staged": {
     "*.js": "npm run lint"
@@ -33,9 +37,12 @@
   },
   "homepage": "https://github.com/pedbernardo/aws-mailduck#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "commander": "^9.4.0",
     "glob": "^8.0.3",
+    "htmlnano": "^2.0.2",
     "juice": "^8.0.0",
+    "ora": "5.4.1",
     "posthtml": "^0.16.6",
     "posthtml-insert-at": "^0.2.7",
     "sass": "^1.54.3"
@@ -50,6 +57,7 @@
     "eslint-plugin-promise": "6.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "rimraf": "^3.0.2",
     "vitest": "^0.21.0"
   }
 }
