@@ -1,0 +1,61 @@
+$directions: "top", "right", "bottom", "left";
+$sizes: (
+  "1":  $space-1,
+  "2":  $space-2,
+  "3":  $space-3,
+  "4":  $space-4,
+  "5":  $space-5,
+  "6":  $space-6,
+  "7":  $space-7,
+  "8":  $space-8,
+  "9":  $space-9,
+  "10": $space-10
+);
+
+@each $sizeName, $size in $sizes {
+  @each $dir in $directions {
+    .u-padding-#{$dir}-#{$sizeName} {
+      padding-#{$dir}: $size;
+    }
+  }
+}
+
+@each $sizeName, $size in $sizes {
+  @each $dir in $directions {
+    .u-margin-#{$dir}-#{$sizeName} {
+      margin-#{$dir}: $size;
+    }
+  }
+}
+
+$font-sizes: (
+  "xxs":   $font-xxs,
+  "xs":    $font-xs,
+  "sm":    $font-sm,
+  "base":  $font-base,
+  "md":    $font-md,
+  "lg":    $font-lg,
+  "xl":    $font-xl,
+  "2xl":   $font-2xl,
+  "3xl":   $font-3xl,
+  "4xl":   $font-4xl
+);
+
+@each $sizeName, $size in $font-sizes {
+  .u-text-#{$sizeName} {
+    font-size: $size;
+  }
+}
+
+$text-directions: "left", "center", "right";
+
+@each $text-direction in $text-directions {
+  .u-text-#{$text-direction} {
+    text-align: #{$text-direction};
+  }
+}
+
+.u-text-bold {
+  font-weight: 700;
+  color: $color-grey-800;
+}

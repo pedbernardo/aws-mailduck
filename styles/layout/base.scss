@@ -1,0 +1,133 @@
+p {
+  font-size: $font-base;
+  line-height: 1.5;
+  color: $color-grey-700;
+  margin-bottom: $space-3;
+}
+
+a {
+  color: $color-blue-500;
+  text-decoration: none;
+}
+
+address {
+  display: block;
+  margin-bottom: $space-4;
+  color: $color-grey-400;
+  font-style: normal;
+  font-size: $font-xs;
+  line-height: 1.5;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #fbfbfb;
+}
+
+///
+/// Container
+///
+/// @example
+/// <table class="container">
+///   <tr>
+///     <td>
+///       {{ content }}
+///     </td>
+///   </tr>
+/// </table>
+///
+.container {
+  width: 472px;
+  margin: $space-7 auto;
+  font-family: $font-family-base;
+}
+
+///
+/// Header
+///
+/// @example
+/// <table class="header">
+///   <tr>
+///     <td class="header-brand">
+///       <img
+///         src="..."
+///         alt="Alt..."
+///         class="header-img"
+///       >
+///     </td>
+///     <td class="header-title">
+///       <h1 class="title">{{ title }}</h1>
+///     </td>
+///   </tr>
+/// </table>
+///
+
+.header {
+  margin-bottom: $space-7;
+}
+
+.header-brand {
+  vertical-align: middle;
+  padding-right: $space-5;
+}
+
+.header-img {
+  width: auto;
+  height: 42px;
+}
+
+.header-title {
+  vertical-align: middle;
+}
+
+///
+/// Footer
+///
+/// @example
+/// <table class="footer">
+///   <tr>
+///     <td class="footer-brand">
+///       <img
+///         src="..."
+///         alt="Alt..."
+///         class="footer-img"
+///       >
+///     </td>
+///     <td>
+///       <address>
+///         {{ adress }}
+///       </address>
+///       <a href="..." target="_blank">{{ site }}</a>
+///     </td>
+///   </tr>
+/// </table>
+///
+.footer {
+  padding-top: $space-6;
+  font-size: $font-sm;
+}
+
+.footer-brand {
+  vertical-align: top;
+  padding-right: $space-9;
+  padding-left: $space-6;
+}
+
+///
+/// Title
+///
+/// @example
+/// <h1 class="title">{{ title }}</h1>
+///
+
+.title {
+  color: $color-grey-800;
+  font-size: $font-xl;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.text-help {
+  font-size: $font-sm;
+  color: $color-grey-400;
+}

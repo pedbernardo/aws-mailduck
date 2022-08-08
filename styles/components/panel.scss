@@ -1,0 +1,9 @@
+.panel {
+  background-color: #fff;
+  border: 1px solid $color-grey-200;
+  border-radius: $border-radius-lg;
+
+  &.-padded {
+    padding: $space-8 $space-10;
+  }
+}

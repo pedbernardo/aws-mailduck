@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: #fff;
+  border: 1px solid $color-grey-300;
+  border-radius: $border-radius-base;
+  font-size: $font-base;
+  color: $color-grey-800;
+
+  &.-primary {
+    background-color: $color-teal-500;
+    border-color: $color-teal-600;
+    color: #fff;
+  }
+}
+
