@@ -2,17 +2,19 @@
   "name": "aws-mailduck",
   "version": "0.0.0",
   "description": "CLI helper to build and deploy email templates to AWS SES",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "bin": {
     "mailduck": "./bin/cli.js"
   },
-  "scripts": {
+  "directories": {
+    "lib": "lib"
+  },  "scripts": {
     "prepare": "husky install",
     "dev:css": "sass styles/main.scss dist/mailduck.css --style=compressed --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint . --fix",
-    "cli:test": "node bin/cli.js playground/*.html -o output",
+    "cli:test": "node bin/cli.mjs playground/*.html -o output",
     "clean": "rimraf dist output",
     "prebuild": "npm run clean",
     "build": "sass styles/main.scss dist/mailduck.css --style=compressed"
@@ -42,7 +44,7 @@
     "glob": "^8.0.3",
     "htmlnano": "^2.0.2",
     "juice": "^8.0.0",
-    "ora": "5.4.1",
+    "ora": "^6.1.2",
     "posthtml": "^0.16.6",
     "posthtml-insert-at": "^0.2.7",
     "sass": "^1.54.3"

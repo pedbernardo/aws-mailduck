@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
-const { Command } = require('commander')
-const { compile, save } = require('../lib/index')
+import { Command } from 'commander'
+import { createRequire } from 'module'
+import { compile, save } from '../lib/index.mjs'
+import * as logger from '../lib/logger.mjs'
+
+const require = createRequire(import.meta.url)
 const pkg = require('../package.json')
-const logger = require('../lib/logger')
 
 const MailDuck = new Command()
   .version(pkg.version)
