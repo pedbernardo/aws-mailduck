@@ -1,6 +1,6 @@
 {
   "name": "aws-mailduck",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CLI helper to build and deploy email templates to AWS SES",
   "main": "lib/index.mjs",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "directories": {
     "lib": "lib"
-  },  "scripts": {
+  },
+  "scripts": {
     "prepare": "husky install",
     "dev:css": "sass styles/main.scss dist/mailduck.css --style=compressed --watch",
     "test": "vitest run",
