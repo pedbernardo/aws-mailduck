@@ -16,6 +16,8 @@
     "test:watch": "vitest",
     "lint": "eslint . --fix",
     "cli:test": "node bin/cli.mjs playground/*.html -o output",
+    "cli:dev": "chokidar bin/cli.mjs playground/*.html -o output --watch playground",
+    "dev:watch": "chokidar \"./playground/*.html\" -c \"npm run cli:test\"",
     "clean": "rimraf dist output",
     "prebuild": "npm run clean",
     "build": "sass styles/main.scss dist/mailduck.css --style=compressed"
@@ -53,6 +55,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "chokidar-cli": "^3.0.0",
+    "escape-unicode": "^0.2.0",
     "eslint": "8.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "2.25.2",
