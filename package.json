@@ -12,18 +12,18 @@
   "scripts": {
     "prepare": "husky install",
     "dev:css": "sass styles/main.scss dist/mailduck.css --style=compressed --watch",
+    "dev:watch": "chokidar \"./playground/*.html\" -c \"npm run cli:test\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint . --fix",
+    "lint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
     "cli:test": "node bin/cli.mjs playground/*.html -o output",
     "cli:dev": "chokidar bin/cli.mjs playground/*.html -o output --watch playground",
-    "dev:watch": "chokidar \"./playground/*.html\" -c \"npm run cli:test\"",
     "clean": "rimraf dist output",
     "prebuild": "npm run clean",
     "build": "sass styles/main.scss dist/mailduck.css --style=compressed"
   },
   "lint-staged": {
-    "*.js": "npm run lint"
+    "*.{js,mjs,cjs}": "eslint"
   },
   "repository": {
     "type": "git",
