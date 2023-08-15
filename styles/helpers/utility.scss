@@ -55,6 +55,18 @@ $text-directions: "left", "center", "right";
   }
 }
 
+$colors: "grey", "red", "blue", "teal";
+
+@each $color in $colors {
+  @for $i from 0 through 9 {
+    $colorScale: $i * 100;
+
+    .u-text-#{$color}-#{$colorScale} {
+      color: map-get($colors-map, #{$color}-#{$colorScale}) !important;
+    }
+  }
+}
+
 .u-text-bold {
   font-weight: 700;
   color: $color-grey-800;
