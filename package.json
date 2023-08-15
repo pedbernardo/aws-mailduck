@@ -9,6 +9,9 @@
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "prepare": "husky install",
     "dev:css": "sass styles/main.scss dist/mailduck.css --style=compressed --watch",
