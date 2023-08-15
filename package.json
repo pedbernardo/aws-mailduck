@@ -16,7 +16,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
-    "cli:test": "node bin/mailduck.mjs playground/*.html -o output",
+    "cli:test": "node bin/mailduck.mjs playground/*.html -o output -d -u -m",
     "cli:dev": "chokidar bin/mailduck.mjs playground/*.html -o output --watch playground",
     "clean": "rimraf dist output",
     "prebuild": "npm run clean",
