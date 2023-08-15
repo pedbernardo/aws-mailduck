@@ -4,7 +4,7 @@
   "description": "CLI helper to build and deploy email templates to AWS SES",
   "main": "lib/index.mjs",
   "bin": {
-    "mailduck": "./bin/cli.mjs"
+    "mailduck": "./bin/mailduck.mjs"
   },
   "directories": {
     "lib": "lib"
@@ -16,8 +16,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
-    "cli:test": "node bin/cli.mjs playground/*.html -o output",
-    "cli:dev": "chokidar bin/cli.mjs playground/*.html -o output --watch playground",
+    "cli:test": "node bin/mailduck.mjs playground/*.html -o output",
+    "cli:dev": "chokidar bin/mailduck.mjs playground/*.html -o output --watch playground",
     "clean": "rimraf dist output",
     "prebuild": "npm run clean",
     "build": "sass styles/main.scss dist/mailduck.css --style=compressed"
