@@ -19,7 +19,7 @@ const MailDuck = new Command()
   .option('-u, --unicode', 'Convert accents to unicode escaped characters')
   .requiredOption('-o, --outdir <outdir>', 'output directory')
   .action(async (inputs, options) => {
-    options.minify = options.minify ?? true
+    options.minify = options.minify ?? false
     options.unicode = options.unicode ?? false
 
     if (options.debug) console.info('Mailduck called with options %o', options)
