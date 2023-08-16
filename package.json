@@ -1,6 +1,6 @@
 {
   "name": "aws-mailduck",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "CLI helper to build and deploy email templates to AWS SES",
   "main": "lib/index.mjs",
   "bin": {
