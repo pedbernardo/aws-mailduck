@@ -47,6 +47,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^9.4.0",
+    "escape-unicode": "^0.2.0",
     "glob": "^8.0.3",
     "htmlnano": "^2.0.2",
     "juice": "^8.0.0",
@@ -59,7 +60,6 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "chokidar-cli": "^3.0.0",
-    "escape-unicode": "^0.2.0",
     "eslint": "8.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "2.25.2",
